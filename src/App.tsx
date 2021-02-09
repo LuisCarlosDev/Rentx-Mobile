@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import Login from './pages/LogIn';
 
 // import { Container } from './styles';
@@ -7,8 +7,11 @@ import Login from './pages/LogIn';
 const src: React.FC = () => {
   return (
     <>
+
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
-      <Login />
+      <View style={{ flex: 1, backgroundColor: '#ffffff' }}>
+        <Login />
+      </View>
     </>
   )
 }

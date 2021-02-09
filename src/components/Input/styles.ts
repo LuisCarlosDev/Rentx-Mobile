@@ -28,7 +28,7 @@ export const Container = styled.View<ContainerProps>`
   ${props =>
     props.isFocused &&
     css`
-      border-color: #ff9000;
+      border-color: #dc1637;
     `}
 `;
 
@@ -43,3 +43,11 @@ export const Icon = styled(FeatherIcon)`
   margin-right: 16px;
   color: #7a7a80;
 `;
+
+
+export const Separator = styled.View`
+  border: 2px solid #ffffff;
+  height: 100%;
+  margin-left: 07px;
+  margin-right: 23px;
+`

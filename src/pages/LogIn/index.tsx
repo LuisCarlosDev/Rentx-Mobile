@@ -3,9 +3,10 @@ import { Form } from '@unform/mobile';
 import React, { useRef } from 'react';
 import { TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-import { Container, Header, Title, SubTitle, BackButton,  } from './styles';
+import { Container, Header, Title, SubTitle, BackButton, ForgotPassword, ForgotPasswordText, } from './styles';
 
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
@@ -49,6 +50,14 @@ const Login: React.FC = () => {
             formRef.current?.submitForm();
           }}
         />
+
+        <ForgotPassword>
+          <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
+        </ForgotPassword>
+
+        <Button>
+          Login
+        </Button>
 
       </Form>
     </Container>
