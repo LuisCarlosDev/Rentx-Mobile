@@ -1,6 +1,7 @@
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/mobile';
 import React, { useRef } from 'react';
+import { TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Input from '../../components/Input';
 
@@ -8,7 +9,7 @@ import { Container, Header, Title, SubTitle, BackButton,  } from './styles';
 
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-
+  const passwordInputRef = useRef<TextInput>(null);
 
   return (
     <Container>
@@ -26,8 +27,27 @@ const Login: React.FC = () => {
 
       <Form ref={formRef} onSubmit={() => {}}>
         <Input
-          name="e-mail"
-          icon="email"
+          autoCorrect={false}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          returnKeyType="next"
+          onSubmitEditing={() => {
+            passwordInputRef.current?.focus();
+          }}
+          name="E-mail"
+          icon="mail"
+          placeholder="E-mail"
+        />
+        <Input
+          ref={passwordInputRef}
+          name="Password"
+          icon="lock"
+          placeholder="Senha"
+          secureTextEntry
+          returnKeyType="send"
+          onSubmitEditing={() => {
+            formRef.current?.submitForm();
+          }}
         />
 
       </Form>
