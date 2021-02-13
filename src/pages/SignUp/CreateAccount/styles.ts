@@ -10,7 +10,6 @@ export const Container = styled.View`
 `;
 
 export const Header = styled.View`
-
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 32px;
@@ -37,17 +36,9 @@ export const SubTitle = styled.Text`
   margin-bottom: 110px;
 `;
 
-export const ForgotPassword = styled.TouchableOpacity`
-  margin-top: 24px;
-  left: 195px;
-  right: 0;
-`;
-
-export const ForgotPasswordText = styled.Text`
-  font-family: 'Inter-Regular';
-  font-size: 13px;
-  color: #737380;
-
-
+export const FormTitle = styled.Text`
+  font-family: 'Archivo-SemiBold';
+  font-size: 20px;
+  margin-bottom: 24px;
 `;
 
