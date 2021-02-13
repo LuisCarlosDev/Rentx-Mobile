@@ -4,7 +4,9 @@ import { Image, StatusBar } from 'react-native';
 
 import backgroundArrowLeft from '../../assets/arrow.png';
 
-import { Container, Header, HeaderTitle, InfoDate, InText, In, TillText, Till, InContent, TillContent, } from './styles';
+import DateTimePicker from '@react-native-community/datetimepicker';
+
+import { Container, Header, HeaderTitle, InfoDate, InText, In, TillText, Till, InContent, TillContent, Calendar} from './styles';
 
 const Date: React.FC = () => {
   return (
@@ -28,6 +30,10 @@ const Date: React.FC = () => {
         </InfoDate>
 
       </Header>
+
+      <Calendar>
+        <DateTimePicker mode="date" value={new Date()} />
+      </Calendar>
     </Container>
   );
 };

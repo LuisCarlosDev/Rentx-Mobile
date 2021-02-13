@@ -65,3 +65,6 @@ export const Till = styled.Text`
   color: #ffffff;
 `;
 
+export const Calendar = styled.View`
+
+`;
