@@ -64,7 +64,3 @@ export const Till = styled.Text`
   margin-top: 9px;
   color: #ffffff;
 `;
-
-export const Calendar = styled.View`
-
-`;

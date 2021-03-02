@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Image, StatusBar } from 'react-native';
 
 import backgroundArrowLeft from '../../assets/arrow.png';
 
-import DateTimePicker from '@react-native-community/datetimepicker';
+import Button from '../../components/Button';
 
-import { Container, Header, HeaderTitle, InfoDate, InText, In, TillText, Till, InContent, TillContent, Calendar} from './styles';
+import { Calendar, LocaleConfig } from 'react-native-calendars';
 
-const Date: React.FC = () => {
+import {Container,
+        Header,
+        HeaderTitle,
+        InfoDate,
+        InText,
+        In,
+        TillText,
+        Till,
+        InContent,
+        TillContent,
+} from './styles';
+
+const ConfirmDate: React.FC = () => {
   return (
     <Container>
       <StatusBar barStyle="light-content" backgroundColor="#1b1b1f" />
@@ -31,11 +43,16 @@ const Date: React.FC = () => {
 
       </Header>
 
-      <Calendar>
-        <DateTimePicker mode="date" value={new Date()} />
-      </Calendar>
+      <Calendar
+        theme={{
+          textSectionTitleColor: '#aeaeb3'
+        }}
+      />
+
+        <Button>Confimar</Button>
+
     </Container>
   );
 };
 
-export default Date;
+export default ConfirmDate;
